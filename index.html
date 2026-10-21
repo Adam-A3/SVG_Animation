@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — SVG Animation Showcase</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>SVG Animation Showcase</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>1. Hover Transition</h2>
+      <svg class="hover-icon" viewBox="0 0 100 100"
+           role="img" aria-labelledby="hover-title">
+        <title id="hover-title">A star that turns gold on hover</title>
+        <polygon points="50,10  61,40  93,40  67,60  77,93  50,73  23,93  33,60  7,40  39,40" />
+      </svg>
+      <p>Caption: uses CSS <code>transition</code> on <code>fill</code> and <code>transform</code>.</p>
+    </section>
+
+    <section>
+      <h2>2. Spinning Loader</h2>
+      <svg class="spinner" viewBox="0 0 50 50"
+           role="img" aria-labelledby="spin-title">
+        <title id="spin-title">Loading spinner</title>
+        <circle cx="25" cy="25" r="20"
+                fill="none" stroke-width="5"
+                stroke-linecap="round"
+                stroke-dasharray="90 150" />
+      </svg>
+      <p>Caption: uses <code>@keyframes spin</code> with infinite linear animation.</p>
+    </section>
+
+    <section>
+        <h2>3. Self drawing line</h2>
+        <svg  class="draw-line" viewBox="0 0 200 100" role="img" aria-label="A line being drawn">
+        <line class="draw" x1="20" y1="50" x2="180" y2="50"
+        stroke="#0b3d91" stroke-width="4" stroke-linecap="round" />
+        </svg>
+        <p>Caption: uses keyframes, stroke-dasharray, and stroke-dashoffset. Animation uses ease out forward</p>
+    </section>
+
+    <section>
+        <h2>4. Fade in</h2>
+        <svg class="fade-in" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="10"/>
+        </svg>
+        <p>Caption: use keyframes and east-out both </p>
+    </section>
+
+    <!-- ... two more sections for draw + fade ... -->
+
+  </main>
+
+  <footer><p>&copy; 2026 Adam A</p></footer>
+
+  <p><strong>Reflection:</strong> The first two animations where the easiest as they where included within the HTML skeleton. The fade-in was easy as I used a simple shape. For the line I used the example provided in the lesson. I would say the line was the 'hardest', but they where all not very hard. I looked up 'stroke-dasharray' to understand it better. The stroke-dasharray property defines alternating gaps and lines along the edge of an svg property. I have seen all of these patterns before on many differnt websites</p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* ===== Example 1 — Hover transition ===== */
+.hover-icon {
+  width: 100px; height: 100px;
+  transform-origin: center;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+.hover-icon polygon { fill: #0b3d91; transition: fill 0.3s ease; }
+.hover-icon:hover { transform: scale(1.1) rotate(8deg); }
+.hover-icon:hover polygon { fill: #f0c419; }
+
+/* ===== Example 2 — Spinning loader ===== */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 48px; height: 48px;
+  animation: spin 1s linear infinite;
+}
+.spinner circle { stroke: #0b3d91; }
+
+/* ===== Example 3 — Self-drawing line ===== */
+@keyframes draw {
+  from { stroke-dashoffset: 300; }
+  to   { stroke-dashoffset: 0;   }
+}
+.draw-line {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 1.6s ease-out forwards;
+}
+
+/* ===== Example 4 — Fade-up entrance ===== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fade-up 0.8s ease-out 0.3s both;
+}
+
+/* ===== REQUIRED — Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
